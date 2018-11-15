@@ -29,7 +29,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        ImageView ingredientsIv = findViewById(R.id.image_iv);
+        mSandwichIv = findViewById(R.id.image_iv);
         mAlsoKnownTv = findViewById(R.id.also_known_tv);
         mAlsoKnownLabelTv = findViewById(R.id.alsoKnownAs_label);
         mOriginTv = findViewById(R.id.origin_tv);
@@ -61,7 +61,7 @@ public class DetailActivity extends AppCompatActivity {
         populateUI(sandwich);
         Picasso.with(this)
                 .load(sandwich.getImage())
-                .into(ingredientsIv);
+                .into(mSandwichIv);
 
         setTitle(sandwich.getMainName());
     }
